@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated May 18, 2020 11:14:46 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.civil.binder.temp.Page" table="page" catalog="civil" optimistic-lock="version">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="page" class="com.civil.binder.temp.Page" fetch="select">
+            <column name="parent_id" />
+        </many-to-one>
+        <property name="url" type="string">
+            <column name="url" length="100" />
+        </property>
+        <property name="name" type="string">
+            <column name="name" length="100" />
+        </property>
+        <property name="type" type="java.lang.Integer">
+            <column name="type" />
+        </property>
+        <property name="createdate" type="date">
+            <column name="createdate" length="10" />
+        </property>
+        <property name="nameBangla" type="string">
+            <column name="name_bangla" length="100" />
+        </property>
+        <property name="cssClass" type="string">
+            <column name="css_class" length="100" />
+        </property>
+        <property name="headerName" type="string">
+            <column name="header_name" length="100" />
+        </property>
+        <property name="position" type="java.lang.Integer">
+            <column name="position" />
+        </property>
+        <set name="pages" table="page" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="parent_id" />
+            </key>
+            <one-to-many class="com.civil.binder.temp.Page" />
+        </set>
+        <set name="rolePages" table="role_page" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="page_id" />
+            </key>
+            <one-to-many class="com.civil.binder.temp.RolePage" />
+        </set>
+    </class>
+</hibernate-mapping>

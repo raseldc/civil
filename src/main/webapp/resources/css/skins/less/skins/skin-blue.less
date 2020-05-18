@@ -1,0 +1,317 @@
+/*
+ * Skin: Blue
+ * ----------
+ */
+@import "../../bootstrap-less/mixins.less";
+@import "../../bootstrap-less/variables.less";
+@import "../variables.less";
+@import "../mixins.less";
+
+.skin-blue {
+  //Navbar
+  .main-header {
+    .navbar {
+      .navbar-variant(@blue; #fff);
+      .sidebar-toggle {
+        color: #fff;
+        &:hover {
+          background: @darker-blue;
+        }
+      }
+      @media (max-width: @screen-header-collapse) {
+        .dropdown-menu {
+          li {
+            &.divider {
+              background-color: rgba(255, 255, 255, 0.1);
+            }
+            a {
+              color: #fff;
+              &:hover {
+                background: @darker-blue;
+              }
+            }
+          }
+        }
+      }
+    }
+    //Logo
+    .logo {
+      .logo-variant(@darker-blue);
+    }
+
+    li.user-header {
+      background-color: @light-blue;
+    }
+  }
+
+  //Content Header
+  .content-header {
+    background: transparent;
+  }
+
+  //Create the sidebar skin
+  .skin-dark-sidebar(@light-blue);
+
+  //theme sidebar
+  .skin-dark-sidebar(@link-hover-border-color) {
+    // Sidebar background color (Both .wrapper and .left-side are responsible for sidebar bg color)
+    .wrapper,
+    .main-sidebar,
+    .left-side {
+      background-color: @blue;
+    }
+    //User Panel (resides in the sidebar)
+    .user-panel {
+      > .info, > .info > a {
+        color: #fff;
+      }
+    }
+    //Sidebar Menu. First level links
+    .sidebar-menu > li {
+      //Section Headning
+      &.header {
+        color: lighten(@blue, 20%);
+        background: darken(@blue, 4%);
+      }
+      //links
+      > a {
+        border-left: 3px solid transparent;
+      }
+      //Hover and active states
+      &:hover > a,
+      &.active > a,
+      &.menu-open > a {
+        color: @sidebar-dark-hover-color;
+        background: @sidebar-dark-hover-bg;
+      }
+      &.active > a {
+        border-left-color: @link-hover-border-color;
+      }
+      //First Level Submenu
+      > .treeview-menu {
+        margin: 0 1px;
+        background: @lighter-blue;
+      }
+    }
+    //All links within the sidebar menu
+    .sidebar a {
+      color: @white;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+    //All submenus
+    .sidebar-menu .treeview-menu {
+      > li {
+        > a {
+          color: @white;
+        }
+        &.active > a, > a:hover {
+          color: lighten(@blue, 80%);
+          background: @blue;
+        }
+      }
+    }
+    //The sidebar search form
+    .sidebar-form {
+      .border-radius(20px);
+      border: 1px solid lighten(@blue, 10%);
+      margin: 10px 10px;
+      input[type="text"], .btn {
+        box-shadow: none;
+        background-color: @white;
+        border: 1px solid transparent;
+        height: 35px;
+        //.transition(all @transition-speed @transition-fn);
+      }
+      input[type="text"] {
+        color: #666;
+        .border-radius(2px, 0, 2px, 0);
+        &:focus,
+        &:focus + .input-group-btn .btn {
+          background-color: #fff;
+          color: #666;
+        }
+        &:focus + .input-group-btn .btn {
+          border-left-color: #fff;
+  
+        }
+      }
+      .btn {
+        color: #999;
+        .border-radius(0, 2px, 0, 2px);
+      }
+    }
+  }
+  //theme sidebar
+
+  //theme sidebar
+
+  .layout-top-nav .main-header > .logo {
+    .logo-variant(@blue);
+  }
+  .sidebar-menu>li:hover>a,  .sidebar-menu>li.active>a, .sidebar-menu>li.menu-open>a {
+    color: #fff;
+    background: @darker-blue !important;
+  }
+
+  .modal-header1 {
+    background-color:@blue;
+}
+.btn-primary {
+  color: #fff;
+  background-color: @blue;
+  border-color:@blue ;
+}
+
+.bg-color {
+  background-color:@blue ;
+  color: @white;
+}
+.table>caption+thead>tr:first-child>td, .table>caption+thead>tr:first-child>th, .table>colgroup+thead>tr:first-child>td, .table>colgroup+thead>tr:first-child>th, .table>thead:first-child>tr:first-child>td, .table>thead:first-child>tr:first-child>th {
+  border-top: 0;
+  background-color:@blue;
+  color:@white;
+}
+.pagination>.active>a,
+.pagination>.active>a:focus,
+.pagination>.active>a:hover,
+.pagination>.active>span,
+.pagination>.active>span:focus,
+.pagination>.active>span:hover {
+    z-index: 3;
+    color: @white;
+    cursor: default;
+    background-color: @blue;
+    border-color: @blue;
+}
+.chat .item.active {
+  border-left: 4px solid @blue;
+  background: #fff;
+}
+.direct-chat-success .right>.direct-chat-text {
+  background:@blue;
+  border-color: @blue;
+  color: #ffffff;
+  text-align: right;
+    width: fit-content;
+    float: right;
+    padding: 10px;
+    padding-left: 15px;
+}
+.direct-chat-success .right>.direct-chat-text:after,
+.direct-chat-success .right>.direct-chat-text:before {
+    border-left-color:@blue;
+}
+.primary-color {
+  color: #fff;
+  background-color: @blue;
+}
+.main-header .sidebar-title {
+  color:@white;
+}
+.main-sidebar {
+  background-color: @blue;
+}
+.desig {
+  color:@white;
+}
+
+.notification .fa {
+  color:@white;
+}
+.table-striped>tbody>tr:nth-of-type(odd) {
+  background-color: @white;
+}
+.table-striped>tbody>tr:nth-of-type(even) {
+  background-color: lighten(@blue, 60%);
+}
+.fc-event, .fc-event-dot {
+  background-color:@blue ;
+}
+.fc-button-primary {
+  color: @white;
+  background-color:@lighter-blue;
+  border-color: @lighter-blue;
+}
+
+.fc-button-primary:not(:disabled):active, .fc-button-primary:not(:disabled).fc-button-active {
+  color: @white;
+  background-color:@darker-blue;
+  border-color: @darker-blue;
+}
+
+.fc-button-primary:hover {
+  color: @white;
+  background-color:@darker-blue;
+  border-color: @darker-blue;
+}
+
+.btn-color {
+  background-color:@blue;
+  color: #fff;
+  padding: 6px 18px;
+}
+
+.btn-color:hover {
+  background-color: @darker-blue;
+  color: #fff;
+  padding: 6px 18px;
+}
+.timeline-date {
+  background-color:@blue;
+  color:@white;
+}
+.timeline>li>.fa, .timeline>li>.glyphicon, .timeline>li>.ion {
+  color:@white;
+  background:@blue;
+}
+.modal-header {
+  border-bottom-color: @blue;
+  background: @blue;
+  color: @white;
+}
+.modal-header > .close {
+  float: right;
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 1;
+  color: @white;
+  text-shadow: transparent;
+  filter: alpha(opacity=20);
+  opacity: .8 !important;
+}
+
+.message>a , .chat-user-name>a {
+  color: @blue;
+}
+.dropdown-menu>li>a:hover, .dropdown-menu>li>a:focus, .dropdown-submenu:hover>a, .dropdown-submenu:focus>a {
+    background-color: @white;
+    border-bottom: 1px solid @white;
+    color: @white;
+}
+
+.select2-container--default .select2-selection--multiple .select2-selection__choice {
+  background-color: @blue;
+  border: 1px solid @blue;
+  border-radius: 4px;
+  cursor: default;
+  float: left;
+  margin-right: 5px;
+  margin-top: 5px;
+  padding: 0 5px;
+}
+.select2-container--default .select2-selection--multiple .select2-selection__choice__remove {
+  color: @white;
+}
+.select2-container--default .select2-results__option--highlighted[aria-selected] {
+  background-color:@blue;
+  color: white;
+}
+ 
+
+
+
+
+
+}

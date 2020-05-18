@@ -1,0 +1,274 @@
+/* 
+    Document   : general
+    Created on : Nov 25, 2014, 11:46:53 AM
+    Author     : sarwar
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+ul { list-style: initial; margin: 0; padding: 0; }
+/*li { margin: .2em 0; }*/
+
+
+.Table
+{
+    display: table;    
+    width: 100%;
+    border-color: #888;
+}
+/*.Title
+{
+    display: table-caption;
+    text-align: center;
+    font-weight: bold;
+    font-size: larger;
+}*/
+.Heading
+{
+    display: table-row;
+    font-weight: bold;
+    text-align: center;
+}
+.Row
+{
+    /*display: table-row;*/
+    clear:both;
+    padding:5px;
+    min-height: 20px;
+}
+.RowNoPadding
+{
+    /*display: table-row;*/
+    clear:both;
+    padding:0px;
+}
+.Cell
+{
+    display: table-cell;
+    border: solid;
+    border-width: thin;
+    padding:5px;
+    /*padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 2px;
+    padding-bottom: 2px;*/
+}
+
+.CellWidth
+{
+    width: 150px;
+    display: inline-block;
+}
+
+.myLabel
+{
+    display: table-row;
+    /*width: 50%;*/
+    /*width: 200px;*/
+    /*display:inline-block;*/
+    /*vertical-align: top;*/
+    padding-top: 5px;
+}
+
+.label65
+{
+    /*display: table-row;*/
+    /*padding-top: 5px;*/
+    width: 65%;
+    float:left;
+}
+.label50
+{
+    /*display: table-row;*/
+    /*padding-top: 5px;*/
+    width: 50%;
+    float:left;
+}
+.label35
+{
+    /*display: table-row;*/
+    /*padding-top: 5px;*/
+    width: 35%;
+    float:left;
+}
+.label25
+{
+    width: 25%;
+    float:left;
+}
+
+.label15
+{
+    width: 15%;
+    float:left;
+}
+.label20
+{
+    width: 20%;
+    float:left;
+}
+
+.labelWidth
+{
+    width: 100px;
+}
+
+.myInput
+{
+    /*display: table-cell;*/
+    border: none;    
+    padding: 5px;
+    /*float:left;*/
+    /*width: 50%;*/
+}
+div.left{
+    float: left;
+    padding: 0px;    
+}
+div.right {
+    float: left;
+    padding-left: 5px;
+
+}
+
+
+.pageTitle{
+    font-size: 20px;
+    font-weight: 600;
+}
+.secondPageTitle{
+    font-size: 16px;
+    float:left;
+    padding: 0 0 10px 0;
+}
+
+.searchPageTitle{
+    font-size: 20px;
+    padding: 0 0 10px 0; 
+}
+
+fieldset{
+    border-color: #666;
+}
+
+.Table table tr th {
+    border:1px solid #888;
+    font-weight:normal;
+}
+.Table table tr td{
+    border:1px solid #888;
+}
+
+.errorMessage{    
+    border-radius: 4px;
+    border: #E28D9B solid 1px;
+    background-color: #E0D4D4;    
+    color: #E60404;
+    padding: 15px;
+    margin: 5px 0;
+}
+.successMessage{
+    border: 1px solid transparent;
+    color: #287D29;
+    padding: 15px;
+    margin: 5px 0;
+    background-color: #E4ECE0;
+    border-color: #95AF7F;
+    border-radius: 4px;
+}
+
+.scroll-content {
+    overflow: auto;
+    /*width:1000px;*/
+}
+div.jtable-main-container {
+    height:100%;
+}
+
+/* dashboard related css/script */
+.dashboardButton {
+    /*text-transform: uppercase;*/                        
+    display: inline-block;
+    background: #1F5388;
+    width: 150px;
+    height: 40px;
+    text-align: center;
+    padding: 30px 0 5px 0;
+    font: 1.3em/20px Verdana, Arial, Helvetica, sans-serif;
+    color: #fff;
+    text-decoration: none;
+    -webkit-border-radius: 15px;
+    -khtml-border-radius: 15px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+    border: #7991A5 solid 1px;
+
+    margin-right: 50px;
+}
+.dashboardButton:hover {
+    background: #ccc; 
+    cursor: pointer;
+
+}
+.dashboardButton > a {
+    color: #fff; 
+}
+.dashboardButton:hover > a {
+    color: #000; 
+}
+.ttLabel {
+    /*text-transform: uppercase;*/                        
+    display: inline-block;
+    text-align: center;
+    width: 150px;
+    height: 60px;
+    text-align: center;
+    padding: 30px 20px 10px 20px;
+    font: 3em/20px Verdana, Arial, Helvetica, sans-serif;
+    color: #1F5388;
+    /*border: #7991A5 solid 1px;*/
+}
+
+.nciLabel {
+    /*text-transform: uppercase;*/                        
+    display: inline-block;
+    text-align: center;
+    width: 250px;
+    height: 40px;
+    text-align: left;
+    padding: 20px 15px 10px 15px;
+    font: 1.5em Verdana, Arial, Helvetica, sans-serif;
+    color: #1F5388;
+    /*border: #7991A5 solid 1px;*/
+}
+
+.nciDashboardButton {
+    /*text-transform: uppercase;*/                        
+    display: inline-block;
+    background: #1F5388;
+    width: 150px;
+    height: 25px;
+    text-align: center;
+    padding: 20px 0 10px 0;
+    font: 1.3em/20px Verdana, Arial, Helvetica, sans-serif;
+    color: #fff;
+    text-decoration: none;
+    -webkit-border-radius: 15px;
+    -khtml-border-radius: 15px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+    border: #7991A5 solid 1px;
+
+    margin-right: 50px;
+}
+.nciDashboardButton:hover {
+    background: #ccc; 
+    cursor: pointer;
+
+}
+.nciDashboardButton > a {
+    color: #fff; 
+}
+.nciDashboardButton:hover > a {
+    color: #000; 
+}

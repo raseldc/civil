@@ -1,0 +1,5 @@
+less build:
+lessc less/skins/_all-skins.less _all-skins.css
+
+watch: 
+less-watch-compiler less/skins/  ./ _all-skins.less

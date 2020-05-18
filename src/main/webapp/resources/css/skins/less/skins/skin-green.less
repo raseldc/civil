@@ -1,0 +1,314 @@
+/*
+ * Skin: green
+ * ----------
+ */
+ @import "../../bootstrap-less/mixins.less";
+ @import "../../bootstrap-less/variables.less";
+ @import "../variables.less";
+ @import "../mixins.less";
+ 
+ .skin-green {
+   //Navbar
+   .main-header {
+     .navbar {
+       .navbar-variant(@green; #fff);
+       .sidebar-toggle {
+         color: #fff;
+         &:hover {
+           background: @darker-green;
+         }
+       }
+       @media (max-width: @screen-header-collapse) {
+         .dropdown-menu {
+           li {
+             &.divider {
+               background-color: rgba(255, 255, 255, 0.1);
+             }
+             a {
+               color: #fff;
+               &:hover {
+                 background: @darker-green;
+               }
+             }
+           }
+         }
+       }
+     }
+     //Logo
+     .logo {
+       .logo-variant(@darker-green);
+     }
+ 
+     li.user-header {
+       background-color: @light-green;
+     }
+   }
+ 
+   //Content Header
+   .content-header {
+     background: transparent;
+   }
+ 
+   //Create the sidebar skin
+   .skin-dark-sidebar(@light-green);
+ 
+   //theme sidebar
+   .skin-dark-sidebar(@link-hover-border-color) {
+     // Sidebar background color (Both .wrapper and .left-side are responsible for sidebar bg color)
+     .wrapper,
+     .main-sidebar,
+     .left-side {
+       background-color: @green;
+     }
+     //User Panel (resides in the sidebar)
+     .user-panel {
+       > .info, > .info > a {
+         color: #fff;
+       }
+     }
+     //Sidebar Menu. First level links
+     .sidebar-menu > li {
+       //Section Headning
+       &.header {
+         color: lighten(@green, 20%);
+         background: darken(@green, 4%);
+       }
+       //links
+       > a {
+         border-left: 3px solid transparent;
+       }
+       //Hover and active states
+       &:hover > a,
+       &.active > a,
+       &.menu-open > a {
+         color: @sidebar-dark-hover-color;
+         background: @sidebar-dark-hover-bg;
+       }
+       &.active > a {
+         border-left-color: @link-hover-border-color;
+       }
+       //First Level Submenu
+       > .treeview-menu {
+         margin: 0 1px;
+         background: @lighter-green;
+       }
+     }
+     //All links within the sidebar menu
+     .sidebar a {
+       color: @white;
+       &:hover {
+         text-decoration: none;
+       }
+     }
+     //All submenus
+     .sidebar-menu .treeview-menu {
+       > li {
+         > a {
+           color: @white;
+         }
+         &.active > a, > a:hover {
+           color: lighten(@green, 80%);
+           background: @green;
+         }
+       }
+     }
+     //The sidebar search form
+     .sidebar-form {
+       .border-radius(20px);
+       border: 1px solid lighten(@green, 10%);
+       margin: 10px 10px;
+       input[type="text"], .btn {
+         box-shadow: none;
+         background-color: @white;
+         border: 1px solid transparent;
+         height: 35px;
+         //.transition(all @transition-speed @transition-fn);
+       }
+       input[type="text"] {
+         color: #666;
+         .border-radius(2px, 0, 2px, 0);
+         &:focus,
+         &:focus + .input-group-btn .btn {
+           background-color: #fff;
+           color: #666;
+         }
+         &:focus + .input-group-btn .btn {
+           border-left-color: #fff;
+   
+         }
+       }
+       .btn {
+         color: #999;
+         .border-radius(0, 2px, 0, 2px);
+       }
+     }
+   }
+   //theme sidebar
+ 
+   //theme sidebar
+ 
+   .layout-top-nav .main-header > .logo {
+     .logo-variant(@green);
+   }
+   .sidebar-menu>li:hover>a,  .sidebar-menu>li.active>a, .sidebar-menu>li.menu-open>a {
+     color: #fff;
+     background: @darker-green !important;
+   }
+ 
+   .modal-header1 {
+     background-color:@green;
+ }
+ .btn-primary {
+   color: #fff;
+   background-color: @green;
+   border-color:@green ;
+ }
+ 
+ .bg-color {
+   background-color:@green ;
+   color: @white;
+ }
+ .table>caption+thead>tr:first-child>td, .table>caption+thead>tr:first-child>th, .table>colgroup+thead>tr:first-child>td, .table>colgroup+thead>tr:first-child>th, .table>thead:first-child>tr:first-child>td, .table>thead:first-child>tr:first-child>th {
+   border-top: 0;
+   background-color:@green;
+   color:@white;
+ }
+ .pagination>.active>a,
+ .pagination>.active>a:focus,
+ .pagination>.active>a:hover,
+ .pagination>.active>span,
+ .pagination>.active>span:focus,
+ .pagination>.active>span:hover {
+     z-index: 3;
+     color: @white;
+     cursor: default;
+     background-color: @green;
+     border-color: @green;
+ }
+ .chat .item.active {
+   border-left: 4px solid @green;
+   background: #fff;
+ }
+ .direct-chat-success .right>.direct-chat-text {
+   background:@green;
+   border-color: @green;
+   color: #ffffff;
+   text-align: right;
+   
+   width: fit-content;
+   float: right;
+   padding: 10px;
+   padding-left: 15px;
+ }
+ .direct-chat-success .right>.direct-chat-text:after,
+ .direct-chat-success .right>.direct-chat-text:before {
+     border-left-color:@green;
+ }
+ .primary-color {
+   color: #fff;
+   background-color: @green;
+ }
+ .main-header .sidebar-title {
+   color:@white;
+ }
+ .main-sidebar {
+   background-color: @green;
+ }
+ .desig {
+   color:@white;
+ }
+ 
+ .notification .fa {
+   color:@white;
+ }
+ .table-striped>tbody>tr:nth-of-type(odd) {
+   background-color: @white;
+ }
+ .table-striped>tbody>tr:nth-of-type(even) {
+   background-color: lighten(@green, 60%);
+ }
+ .fc-event, .fc-event-dot {
+   background-color:@green ;
+ }
+ .fc-button-primary {
+   color: @white;
+   background-color:@lighter-green;
+   border-color: @lighter-green;
+ }
+ 
+ .fc-button-primary:not(:disabled):active, .fc-button-primary:not(:disabled).fc-button-active {
+   color: @white;
+   background-color:@darker-green;
+   border-color: @darker-green;
+ }
+ 
+ .fc-button-primary:hover {
+   color: @white;
+   background-color:@darker-green;
+   border-color: @darker-green;
+ }
+ 
+ .btn-color {
+   background-color:@green;
+   color: #fff;
+   padding: 6px 18px;
+ }
+ 
+ .btn-color:hover {
+   background-color: @darker-green;
+   color: #fff;
+   padding: 6px 18px;
+ }
+ .timeline-date {
+   background-color:@green;
+   color:@white;
+ }
+ .timeline>li>.fa, .timeline>li>.glyphicon, .timeline>li>.ion {
+   color:@white;
+   background:@green;
+ }
+ .modal-header {
+   border-bottom-color: @green;
+   background: @green;
+   color: @white;
+ }
+ .modal-header > .close {
+   float: right;
+   font-size: 21px;
+   font-weight: 700;
+   line-height: 1;
+   color: @white;
+   text-shadow: transparent;
+   filter: alpha(opacity=20);
+   opacity: .8 !important;
+ }
+ 
+ .message>a , .chat-user-name>a {
+   color: @green;
+ }
+ .select2-container--default .select2-selection--multiple .select2-selection__choice {
+  background-color: @green;
+  border: 1px solid @green;
+  border-radius: 4px;
+  cursor: default;
+  float: left;
+  margin-right: 5px;
+  margin-top: 5px;
+  padding: 0 5px;
+}
+ 
+.select2-container--default .select2-selection--multiple .select2-selection__choice__remove {
+  color: @white;
+}
+.select2-container--default .select2-results__option--highlighted[aria-selected] {
+  background-color:@green ;
+  color: white;
+}
+ 
+ 
+ 
+ 
+ 
+ 
+ }
+ 

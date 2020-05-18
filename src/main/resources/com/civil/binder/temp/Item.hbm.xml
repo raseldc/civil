@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated May 18, 2020 11:14:46 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.civil.binder.temp.Item" table="item" catalog="civil" optimistic-lock="version">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="item" class="com.civil.binder.temp.Item" fetch="select">
+            <column name="parent_id" />
+        </many-to-one>
+        <property name="code" type="string">
+            <column name="code" length="50" not-null="true" />
+        </property>
+        <property name="description" type="string">
+            <column name="description" />
+        </property>
+        <property name="unit" type="string">
+            <column name="unit" length="50" />
+        </property>
+        <property name="price" type="java.lang.Float">
+            <column name="price" precision="12" scale="0" />
+        </property>
+        <property name="parentCode" type="string">
+            <column name="parent_code" length="50" />
+        </property>
+        <property name="parentItemDescription" type="string">
+            <column name="parent_item_description" />
+        </property>
+        <property name="showCode" type="string">
+            <column name="show_code" length="1000">
+                <comment>if item hase no code parent code is the only code</comment>
+            </column>
+        </property>
+        <set name="items" table="item" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="parent_id" />
+            </key>
+            <one-to-many class="com.civil.binder.temp.Item" />
+        </set>
+        <set name="projectsItems" table="projects_item" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="item_id" />
+            </key>
+            <one-to-many class="com.civil.binder.temp.ProjectsItem" />
+        </set>
+    </class>
+</hibernate-mapping>

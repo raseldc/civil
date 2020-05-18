@@ -1,0 +1,108 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated May 18, 2020 11:14:46 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.civil.binder.temp.Employee" table="employee" catalog="civil" optimistic-lock="version">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <property name="firstName" type="string">
+            <column name="first_name" length="50" />
+        </property>
+        <property name="lastName" type="string">
+            <column name="last_name" length="50" />
+        </property>
+        <property name="fatherName" type="string">
+            <column name="father_name" length="50" />
+        </property>
+        <property name="motherName" type="string">
+            <column name="mother_name" length="50" />
+        </property>
+        <property name="mobileNumber" type="string">
+            <column name="mobile_number" length="50" />
+        </property>
+        <property name="nid" type="string">
+            <column name="nid" length="50" />
+        </property>
+        <property name="passportNumber" type="string">
+            <column name="passport_number" length="50" />
+        </property>
+        <property name="drivingLicense" type="string">
+            <column name="driving_license" length="50" />
+        </property>
+        <property name="imageUrl" type="string">
+            <column name="image_url" length="50" />
+        </property>
+        <property name="email" type="string">
+            <column name="email" length="1000" />
+        </property>
+        <property name="permanentAddress" type="string">
+            <column name="permanent_address" length="1000" />
+        </property>
+        <property name="presentAddress" type="string">
+            <column name="present_address" length="1000" />
+        </property>
+        <property name="sex" type="java.lang.Integer">
+            <column name="sex" />
+        </property>
+        <property name="dob" type="date">
+            <column name="dob" length="10" />
+        </property>
+        <property name="placeOfBirth" type="string">
+            <column name="place_of_birth" length="50" />
+        </property>
+        <property name="nationality" type="string">
+            <column name="nationality" length="50" />
+        </property>
+        <property name="degree" type="string">
+            <column name="degree" length="400" />
+        </property>
+        <property name="subject" type="string">
+            <column name="subject" length="50" />
+        </property>
+        <property name="institution" type="string">
+            <column name="institution" length="200" />
+        </property>
+        <property name="year" type="string">
+            <column name="year" length="50" />
+        </property>
+        <property name="religion" type="string">
+            <column name="religion" length="50" />
+        </property>
+        <property name="birthCertificate" type="string">
+            <column name="birth_certificate" length="50" />
+        </property>
+        <property name="bloodGroup" type="string">
+            <column name="blood_group" length="50" />
+        </property>
+        <property name="post" type="string">
+            <column name="post" length="20" />
+        </property>
+        <property name="joinDate" type="date">
+            <column name="join_date" length="10" />
+        </property>
+        <property name="leaveDate" type="date">
+            <column name="leave_date" length="10" />
+        </property>
+        <property name="active" type="java.lang.Integer">
+            <column name="active" />
+        </property>
+        <property name="officeId" type="string">
+            <column name="office_id" length="20" />
+        </property>
+        <property name="salaryGrade" type="string">
+            <column name="salary_grade" length="50" />
+        </property>
+        <property name="createdate" type="date">
+            <column name="createdate" length="10" />
+        </property>
+        <set name="users" table="user" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="emp_id" />
+            </key>
+            <one-to-many class="com.civil.binder.temp.User" />
+        </set>
+    </class>
+</hibernate-mapping>
