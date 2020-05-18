@@ -352,6 +352,7 @@
 
     <build>
         <plugins>
+		 <defaultGoal>install</defaultGoal>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
